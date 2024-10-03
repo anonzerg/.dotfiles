@@ -19,12 +19,20 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # config prompt
 fpath=(~/.zsh $fpath)
-zstyle ':completion:*:*:git:*' script ~/.zsh/_git
+zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 source ~/.git-prompt.sh
 setopt PROMPT_SUBST ; PS1=' %B%F{blue}%~%f%F{yellow}$(__git_ps1 " git:(%s)") %f%%%b '
 
 # load aliases
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
+fi
+
+if [ -e ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if [ -e ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+	source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
