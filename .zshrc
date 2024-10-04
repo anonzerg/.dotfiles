@@ -17,10 +17,12 @@ zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:
 # enable linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+
 # config prompt
 fpath=(~/.zsh $fpath)
 zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 source ~/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=1
 setopt PROMPT_SUBST ; PS1=' %B%F{blue}%~%f%F{yellow}$(__git_ps1 " git:(%s)") %f%%%b '
 
 # load aliases
