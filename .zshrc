@@ -35,7 +35,3 @@ if [ -e ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-if [ -e ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-	source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
