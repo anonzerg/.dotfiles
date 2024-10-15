@@ -4,3 +4,6 @@ setlocal shiftwidth=2
 setlocal softtabstop=2
 setlocal textwidth=79
 setlocal fo-=ro fo+=cql
+
+autocmd BufWritePost <buffer> if filereadable('Makefile') | make | endif
+
