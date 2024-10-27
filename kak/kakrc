@@ -1,0 +1,11 @@
+colorscheme tomorrow-night
+
+hook global WinSetOption filetype=.* %{
+    set-option buffer expandtab
+    set-option buffer tabstop 4
+    set-option buffer indentwidth 4
+}
+
+add-highlighter global/ show-matching
+add-highlighter global/ number-lines -relative -hlcursor
+add-highlighter global/ wrap -word -indent
