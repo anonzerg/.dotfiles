@@ -13,3 +13,5 @@ alias rm='rm -iv'
 alias mkdir='mkdir -v'
 alias rmdir='rmdir -v'
 alias cp='cp -rv'
+alias du='du -sh'
+
