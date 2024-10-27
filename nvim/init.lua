@@ -26,6 +26,7 @@ vim.opt.ruler = true
 vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 vim.opt.backup = false
+vim.opt.mouse = ""
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
