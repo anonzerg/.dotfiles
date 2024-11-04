@@ -63,30 +63,7 @@ require("nvim-treesitter.configs").setup {
 }
 
 local lspconfig = require("lspconfig")
-lspconfig.gopls.setup({
-	cmd = {"gopls"},
-	filetypes = {"go", "gomod", "gowork", "gotmpl"},
-	root_dir = lspconfig.util.root_pattern("go.work", "go.mode", ".git"),
-	capabilities = vim.lsp.protocol.make_client_capabilities(),
-
-	settings = {
-		gopls = {
-			analyses = {
-				unusedparams = true,
-				nilness = true,
-				shadow = true,
-				unusedwrite = true,
-			},
-			usePlaceholders = true,
-			staticcheck = true,
-			gofumpt = true,
-			hoverKind = "FullDocumentation",
-			completeUnimported = true,
-			semanticTokens = true,
-			matcher = "Fuzzy",
-		}
-	},
-})
+lspconfig.gopls.setup({})
 lspconfig.clangd.setup({})
 lspconfig.zls.setup({})
 
