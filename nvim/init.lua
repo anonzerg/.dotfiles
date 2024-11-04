@@ -27,6 +27,7 @@ vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.mouse = ""
+vim.opt.scrolloff = 0
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
@@ -86,12 +87,23 @@ lspconfig.gopls.setup({
 		}
 	},
 })
-
 lspconfig.clangd.setup({})
+lspconfig.zls.setup({})
 
 vim.diagnostic.config({
 	update_in_insert = true,
 	virtual_text = true,
 	signs = false,
 })
+
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("HighlightYank", {clear = true}),
+	callback = function()
+		vim.highlight.on_yank({
+			timeout = 512,
+		})
+	end,
+})
+
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
