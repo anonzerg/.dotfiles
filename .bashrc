@@ -18,6 +18,7 @@ shopt -s histappend
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
+HISTCONTROL=erasedups
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -117,17 +118,17 @@ if ! shopt -oq posix; then
 fi
 
 # default text editor.
-export EDITOR=vim
+export EDITOR=nvim
 
 # cofing git prompt.
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_HIDE_IF_PWD_IGNORED=1
 
 # config shell prompt
 export PS1=' \[\033[01;94m\]\w\[\033[93m\]$(__git_ps1 " git:(%s)")\[\033[00m\] \$ '
 
-# enable vi-mode in bash
-#set -o vi
-
 # enable linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
