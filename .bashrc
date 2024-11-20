@@ -132,3 +132,9 @@ export PS1=' \[\033[01;94m\]\w\[\033[93m\]$(__git_ps1 " git:(%s)")\[\033[00m\] \
 # enable linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# set nvim to read manpages insread of less.
+export MANPAGER="nvim +Man!"
+
+# zsh-like tap completion
+bind "TAB:menu-complete"
+
