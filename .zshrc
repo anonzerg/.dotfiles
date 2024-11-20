@@ -52,3 +52,5 @@ function zle-line-init {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+export MANPAGER="nvim +Man!"
+
