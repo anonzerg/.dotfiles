@@ -66,6 +66,7 @@ local lspconfig = require("lspconfig")
 lspconfig.gopls.setup({})
 lspconfig.clangd.setup({})
 lspconfig.zls.setup({})
+lspconfig.rust_analyzer.setup({})
 
 vim.diagnostic.config({
 	update_in_insert = true,
@@ -83,4 +84,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+require("nvim-treesitter.configs").setup {
+  ensure_installed = {"c", "zig", "lua", "python", "rust", "toml", "ruby", "go"},
+  auto_install = true,
+}
 
