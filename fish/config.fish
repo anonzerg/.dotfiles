@@ -1,5 +1,6 @@
 if status is-interactive
   fish_add_path /home/linuxbrew/.linuxbrew/bin
+  fish_add_path /home/linuxbrew/.linuxbrew/sbin
   set -gx EDITOR nvim
   set -U fish_greeting
 end
