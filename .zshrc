@@ -34,23 +34,5 @@ if [ -e ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-# change cursor shape
-# insert mode beam
-# comand mode block
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] || [[ $1 == "block" ]]; then
-    echo -ne "\e[1 q"
-  else
-    echo -ne "\e[5 q"
-  fi
-}
-
-function zle-line-init {
-  zle-keymap-select
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-
 export MANPAGER="nvim +Man!"
 
