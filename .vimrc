@@ -5,6 +5,7 @@ endif
 syntax on
 filetype plugin indent on
 
+set t_Co=256
 set background=dark
 colorscheme default
 
@@ -15,6 +16,7 @@ set expandtab
 set autoindent
 set smartindent
 set showmatch
+set colorcolumn=80
 
 set number
 set relativenumber
