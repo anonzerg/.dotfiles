@@ -62,6 +62,10 @@ require("nvim-treesitter.configs").setup {
   },
 }
 
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = "single"
+})
+
 local lspconfig = require("lspconfig")
 lspconfig.gopls.setup({})
 lspconfig.clangd.setup({})
@@ -72,6 +76,20 @@ vim.diagnostic.config({
   virtual_text = true,
   signs = false,
   underline = true,
+})
+
+vim.o.updatetime = 100
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, {
+      focusable = false,
+      border = "single",
+      max_width = 80,
+      wrap = true,
+      severity_sort = true,
+    })
+  end,
 })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
