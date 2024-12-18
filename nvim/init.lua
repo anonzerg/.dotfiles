@@ -108,3 +108,7 @@ require("nvim-treesitter.configs").setup {
   auto_install = false,
 }
 
+vim.o.cursorline = true
+vim.api.nvim_set_hl(0, "CursorLine", {fg = "NONE"})
+vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#FCE094", bold = true})
+
