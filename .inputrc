@@ -8,24 +8,7 @@ set show-all-if-ambiguous on
 set colored-stats On
 set visible-stats On
 set mark-symlinked-directories On
-set colored-completion-prefix On
 set menu-complete-display-prefix On
 
 set editing-mode vi
-$if mode=vi
-set keymap vi-command
-# these are for vi-command mode
-"\e[A": history-search-backward
-"\e[B": history-search-forward
-j: history-search-forward
-k: history-search-backward
-set keymap vi-insert
-# these are for vi-insert mode
-"\e[A": history-search-backward
-"\e[B": history-search-forward
-$endif
-
-set show-mode-in-prompt on
-set vi-ins-mode-string (ins)
-set vi-cmd-mode-string (cmd)
 
