@@ -5,9 +5,14 @@ endif
 syntax on
 filetype plugin indent on
 
-set t_Co=256
-set background=dark
-colorscheme default
+let g:disable_bg = 1
+let s:italics = 0
+
+colorscheme rosepine
+set termguicolors
+
+set cursorline
+highlight CursorLineNr guifg=#f6c177
 
 set textwidth=80
 set tabstop=2
@@ -32,6 +37,8 @@ set showcmd
 runtime! ftplugin/man.vim
 set hlsearch
 set ignorecase
+set smartcase
+set incsearch
 
 set nobackup
 set noswapfile
