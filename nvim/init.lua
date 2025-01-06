@@ -110,5 +110,9 @@ require("nvim-treesitter.configs").setup {
 
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, "CursorLine", {fg = "NONE"})
-vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#FCE094", bold = true})
+vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#FCE094"})
+
+vim.o.statusline = " %F %h%m%r%=%-14.(%l,%c%V%) %y %P "
+
+-- TODO: add auto pair and comments
 
