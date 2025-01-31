@@ -69,7 +69,6 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 local lspconfig = require("lspconfig")
 lspconfig.gopls.setup({})
 lspconfig.clangd.setup({})
-lspconfig.zls.setup({})
 
 vim.diagnostic.config({
   update_in_insert = true,
