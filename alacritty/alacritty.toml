@@ -1,4 +1,4 @@
-import = ["/home/greta/.config/alacritty/themes/neovim-theme.toml"]
+import = ["~/.config/alacritty/themes/neovim-theme.toml"]
 live_config_reload = true
 
 [colors]
@@ -20,6 +20,8 @@ TERM = "xterm-256color"
 size = 13.0
 
 [font.normal]
+#family = "JetBrains Mono NL"
+#family = "Fira Mono"
 family = "IBM Plex Mono"
 style = "Medium"
 
@@ -34,3 +36,4 @@ title = "Alacritty"
 [window.dimensions]
 columns = 80
 lines = 24
+
