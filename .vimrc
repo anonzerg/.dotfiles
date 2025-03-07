@@ -2,11 +2,10 @@ if &compatible
 	set nocompatible
 endif
 
+colorscheme lunaperche 
+
 syntax on
 filetype plugin indent on
-
-colorscheme habamax
-set termguicolors
 
 set textwidth=80
 set tabstop=2
