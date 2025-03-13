@@ -5,7 +5,7 @@ vim.opt.wildignorecase = true
 vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.breakindent = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -67,8 +67,22 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 })
 
 local lspconfig = require("lspconfig")
-lspconfig.gopls.setup({})
-lspconfig.clangd.setup({})
+
+
+local on_attach = function(client, bufnr)
+  local opts = {
+    noremap = true,
+  }
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+end
+
+lspconfig.gopls.setup({
+  on_attach = on_attach,
+})
+lspconfig.clangd.setup({
+  on_attach = on_attach,
+})
 
 vim.diagnostic.config({
   update_in_insert = true,
@@ -77,7 +91,7 @@ vim.diagnostic.config({
   underline = true,
 })
 
-vim.o.updatetime = 100
+vim.o.updatetime = 128
 
 vim.api.nvim_create_autocmd("CursorHold", {
   callback = function()
@@ -103,7 +117,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 require("nvim-treesitter.configs").setup {
-  ensure_installed = {"c", "zig", "lua", "python", "rust", "toml", "ruby", "go", "make"},
+  ensure_installed = {"c", "julia", "zig", "lua", "python", "rust", "toml", "ruby", "go", "make"},
   auto_install = false,
 }
 
