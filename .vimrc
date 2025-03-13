@@ -1,11 +1,20 @@
+call plug#begin('~/.vim/plugged')
+  Plug 'tpope/vim-fugitive'
+  Plug 'rust-lang/rust.vim'
+call plug#end()
+
 if &compatible
 	set nocompatible
 endif
 
-colorscheme lunaperche 
+colorscheme lunaperche
+set background=dark
+
+filetype on
+filetype plugin on
+filetype indent on
 
 syntax on
-filetype plugin indent on
 
 set textwidth=80
 set tabstop=2
@@ -18,7 +27,7 @@ set colorcolumn=80
 
 set number
 set relativenumber
-set wrap
+set nowrap
 
 set omnifunc=syntaxcomplete#Complete
 
@@ -40,4 +49,8 @@ let g:netrw_save_history=0
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 set backspace=indent,eol,start
+
+nnoremap <Esc> :nohlsearch<CR>
+set updatetime=256
+set timeoutlen=256
 
