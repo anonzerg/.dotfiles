@@ -57,4 +57,3 @@ end
 vim.api.nvim_create_user_command("FloaTerminal", toggle_terminal, {})
 vim.keymap.set({"n", "t"}, "<leader>t", toggle_terminal)
 
-
