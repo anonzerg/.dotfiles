@@ -1,8 +1,3 @@
-call plug#begin('~/.vim/plugged')
-  Plug 'tpope/vim-fugitive'
-  Plug 'rust-lang/rust.vim'
-call plug#end()
-
 if &compatible
 	set nocompatible
 endif
