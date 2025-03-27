@@ -2,7 +2,6 @@ if &compatible
 	set nocompatible
 endif
 
-colorscheme lunaperche
 set background=dark
 
 filetype on
@@ -44,8 +43,4 @@ let g:netrw_save_history=0
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 set backspace=indent,eol,start
-
-nnoremap <Esc> :nohlsearch<CR>
-set updatetime=256
-set timeoutlen=256
 
