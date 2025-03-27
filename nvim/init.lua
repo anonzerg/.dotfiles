@@ -1,12 +1,12 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.ignorecase = true
 vim.opt.wildignorecase = true
 vim.opt.smartcase = true
-vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.opt.wrapscan = false
 vim.opt.wrap = false
-vim.opt.breakindent = true
+--vim.opt.breakindent = true
+--vim.opt.linebreak = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
@@ -16,7 +16,6 @@ vim.opt.autoindent = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.title = true
-vim.opt.ttimeout = false
 vim.opt.wildmenu = true
 vim.opt.syntax = "on"
 vim.opt.showcmd = true
@@ -27,7 +26,7 @@ vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.mouse = ""
-vim.opt.scrolloff = 0
+--vim.opt.scrolloff = 0
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",
