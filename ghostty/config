@@ -2,8 +2,6 @@ font-family = "IBM Plex Mono Medm"
 font-size = 13
 
 theme = NvimDark
-background-blur = false
-background-opacity = 1.0
 
 window-padding-x = 0, 0
 window-padding-y = 0, 0
