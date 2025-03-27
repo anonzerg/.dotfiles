@@ -117,7 +117,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 require("nvim-treesitter.configs").setup {
-  ensure_installed = {"c", "julia", "zig", "lua", "python", "rust", "toml", "ruby", "go", "make"},
+  ensure_installed = {"c", "zig", "lua", "python", "rust", "ruby", "go", "make", "html", "css", "javascript"},
   auto_install = false,
 }
 
