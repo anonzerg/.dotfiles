@@ -67,7 +67,6 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 
 local lspconfig = require("lspconfig")
 
-
 local on_attach = function(client, bufnr)
   local opts = {
     noremap = true,
@@ -88,6 +87,15 @@ vim.diagnostic.config({
   virtual_text = true,
   signs = false,
   underline = true,
+})
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(env)
+    local client = vim.lsp.get_client_by_id(env.data.client_id)
+    if client.supports_method("textDocument/completion") then
+      vim.lsp.completion.enable(true, client.id, env.buf, {autotrigger = true})
+    end
+  end,
 })
 
 vim.o.updatetime = 128
@@ -125,6 +133,4 @@ vim.api.nvim_set_hl(0, "CursorLine", {fg = "NONE"})
 vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#FCE094"})
 
 vim.o.statusline = " %F %h%m%r%=%-14.(%l,%c%V%) %y %P "
-
--- TODO: add auto pair and comments
 
