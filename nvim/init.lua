@@ -134,3 +134,10 @@ vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#FCE094"})
 
 vim.o.statusline = " %F %h%m%r%=%-14.(%l,%c%V%) %y %P "
 
+local opts = {noremap = true, silent = true}
+vim.api.nvim_set_keymap("i", "(", "()<Left>", opts)
+vim.api.nvim_set_keymap("i", "[", "[]<Left>", opts)
+vim.api.nvim_set_keymap("i", "{", "{}<Left>", opts)
+vim.api.nvim_set_keymap("i", "\"", "\"\"<Left>", opts)
+vim.api.nvim_set_keymap("i", "'", "''<Left>", opts)
+
