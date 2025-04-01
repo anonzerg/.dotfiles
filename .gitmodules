@@ -8,3 +8,6 @@
 	path = .zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
 
+[submodule "nvim/plugin/Presentation.nvim"]
+	path = nvim/plugin/Presentation.nvim
+	url = https://github.com/anonzerg/Presentation.nvim.git
