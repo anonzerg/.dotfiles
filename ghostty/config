@@ -1,5 +1,5 @@
-#font-family = "IBM Plex Mono Medm"
-font-family = "JetBrains Mono NL SemiBold"
+font-family = "IBM Plex Mono Text"
+#font-family = "JetBrains Mono NL"
 font-size = 16
 
 theme = NvimDark
