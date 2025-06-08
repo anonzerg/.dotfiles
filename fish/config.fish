@@ -12,7 +12,7 @@ function fish_prompt
   set -l stat
 
   set_color --bold blue
-  echo -n "" (prompt_pwd)
+  echo -n (prompt_pwd)
 
   set -g __fish_git_prompt_showdirtystate 1
   set -g __fish_git_prompt_showuntrackedfiles 1
@@ -34,7 +34,7 @@ function fish_right_prompt
   if test $CMD_DURATION -gt 0
     set exec_time (math $CMD_DURATION / 1000)
     set_color normal
-    echo -n "[$exec_time] "
+    echo -n "[$exec_time]"
     set_color normal
   end
 end
