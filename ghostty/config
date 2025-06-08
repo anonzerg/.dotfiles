@@ -3,9 +3,9 @@ font-family = "IBM Plex Mono Text"
 font-size = 16
 
 theme = NvimDark
+background-opacity = 0.8
 
-window-padding-x = 0, 0
-window-padding-y = 0, 0
+window-padding-balance = true
 window-height = 24
 window-width = 80
 
