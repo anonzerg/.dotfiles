@@ -1,6 +1,10 @@
-font-family = "IBM Plex Mono Text"
+#font-family = "IBM Plex Mono Text"
 #font-family = "JetBrains Mono NL"
+#font-family = "Fira Mono Medium"
+font-family = "Cascadia Code Medium"
+
 font-size = 16
+font-feature = -calt, -liga, -dlig
 
 theme = NvimDark
 background-opacity = 0.8
@@ -10,4 +14,3 @@ window-height = 24
 window-width = 80
 
 window-decoration = server
-
