@@ -24,17 +24,8 @@ vim.opt.colorcolumn = "80"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.mouse = ""
+vim.opt.signcolumn = "yes"
 -- vim.opt.scrolloff = 0
-
--- vim.api.nvim_create_autocmd("BufWritePre", {
---   pattern = "*",
---   callback = function()
---     local last_line = vim.fn.getline('$')
---     if last_line ~= '' then
---       vim.api.nvim_buf_set_lines(0, -1, -1, false, {""})
---     end
---   end,
--- })
 
 local function jump_to_last_pos()
   local last_pos = vim.api.nvim_buf_get_mark(0, '"')
@@ -60,7 +51,7 @@ require("nvim-treesitter.configs").setup {
 }
 
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-  border = "single"
+  border = "solid"
 })
 
 local lspconfig = require("lspconfig")
@@ -108,24 +99,24 @@ lspconfig.zls.setup({
 })
 
 vim.diagnostic.config({
-  update_in_insert = false,
-  virtual_lines = true,
+  update_in_insert = true,
+  -- virtual_lines = true,
   -- virtual_text = true,
-  signs = false,
+  signs = true,
   underline = true,
 })
 
--- vim.api.nvim_create_autocmd("CursorHold", {
---   callback = function()
---     vim.diagnostic.open_float(nil, {
---       focusable = false,
---       border = "single",
---       max_width = vim.o.columns,
---       wrap = true,
---       severity_sort = true,
---     })
---   end,
--- })
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    vim.diagnostic.open_float(nil, {
+      focusable = false,
+      border = "solid",
+      max_width = vim.o.columns,
+      wrap = true,
+      severity_sort = true,
+    })
+  end,
+})
 
 -- vim.api.nvim_create_autocmd("LspAttach", {
 --   callback = function(env)
@@ -162,4 +153,3 @@ vim.api.nvim_set_hl(0, "CursorLine", {fg = "NONE"})
 vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#fce094"})
 
 vim.o.statusline = " %F %h%m%r%=%-14.(%l,%c%V%) %y %P "
-
