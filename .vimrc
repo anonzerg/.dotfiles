@@ -10,8 +10,8 @@ filetype indent on
 syntax on
 
 set textwidth=80
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
@@ -44,12 +44,3 @@ au BufReadPost *
       \ if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 set backspace=indent,eol,start
-
-set path+=**
-
-augroup EnsureBlankEnd
-  autocmd!
-  autocmd BufWritePre *
-        \ if getline("$") != "" | call append(line("$"), "") | endif
-augroup END
-
