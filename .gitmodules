@@ -7,3 +7,9 @@
 [submodule ".zsh/zsh-autosuggestions"]
 	path = .zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "nvim/pack/plugins/start/hare.vim"]
+	path = nvim/pack/plugins/start/hare.vim
+	url = git@git.sr.ht:~sircmpwn/hare.vim
+[submodule "nvim/pack/plugins/start/vim-haredoc"]
+	path = nvim/pack/plugins/start/vim-haredoc
+	url = git@git.sr.ht:~torresjrjr/vim-haredoc
