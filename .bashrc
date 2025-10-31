@@ -128,6 +128,3 @@ GIT_PS1_HIDE_IF_PWD_IGNORED=1
 
 # config shell prompt
 export PS1='\[\033[01;94m\]\w\[\033[93m\]$(__git_ps1 " git:(%s)")\[\033[00m\] \$ '
-
-# enable linuxbrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

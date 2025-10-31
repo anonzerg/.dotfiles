@@ -1,7 +1,4 @@
 if status is-interactive
-  fish_add_path /home/linuxbrew/.linuxbrew/bin
-  fish_add_path /home/linuxbrew/.linuxbrew/sbin
-  fish_add_path /home/zerg/go/bin/gopls
   set -gx EDITOR nvim
   set -gx MANPAGER "nvim +Man!"
   set -U fish_greeting

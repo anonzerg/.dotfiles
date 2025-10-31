@@ -30,6 +30,3 @@ fi
 if [ -e ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
-
-# enable linuxbrew
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
