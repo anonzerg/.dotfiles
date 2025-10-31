@@ -1,11 +1,10 @@
-alias update='sudo apt update && sudo apt upgrade -y'
-alias clean='sudo apt autoremove && sudo apt autoclean'
-alias ..='cd ..;pwd'
-alias rm='rm -iv'
-alias mv='mv -iv'
-alias mkdir='mkdir -v'
-alias rmdir='rmdir -v'
-alias cp='cp -rv'
-alias du='du -sh'
-alias tree='tree -C'
-
+alias clean="sudo dnf autoremove && sudo dnf clean all"
+alias ..="cd ..;pwd"
+alias rm="rm -iv"
+alias mv="mv -iv"
+alias mkdir="mkdir -v"
+alias rmdir="rmdir -v"
+alias cp="cp -rv"
+alias du="du -sh"
+alias tree="tree -C"
+alias vi="nvim"
