@@ -1,4 +1,4 @@
-function clean --description 'alias clean=sudo apt autoremove && sudo apt autoclean && sudo apt autopurge && sudo apt clean'
-  sudo apt autoremove && sudo apt autoclean && sudo apt autopurge && sudo apt clean $argv
+function clean --wraps='sudo dnf clean all && sudo dnf autoremove' --description 'alias clean=sudo dnf clean all && sudo dnf autoremove'
+  sudo dnf clean all && sudo dnf autoremove $argv
         
 end
