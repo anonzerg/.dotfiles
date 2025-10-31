@@ -153,3 +153,45 @@ vim.api.nvim_set_hl(0, "CursorLine", {fg = "NONE"})
 vim.api.nvim_set_hl(0, "CursorLineNr", {fg = "#fce094"})
 
 vim.o.statusline = " %F %h%m%r%=%-14.(%l,%c%V%) %y %P "
+
+local map = vim.keymap.set
+local opts = {
+  noremap = true,
+  silent = true,
+}
+
+local sym_map = {
+  ["1"] = "!",
+  ["2"] = "@",
+  ["3"] = "#",
+  ["4"] = "$",
+  ["5"] = "%",
+  ["6"] = "^",
+  ["7"] = "&",
+  ["8"] = "*",
+  ["9"] = "(",
+  ["0"] = ")"
+}
+
+local num_map = {
+  ["!"] = "1",
+  ["@"] = "2",
+  ["#"] = "3",
+  ["$"] = "4",
+  ["%"] = "5",
+  ["^"] = "6",
+  ["&"] = "7",
+  ["*"] = "8",
+  ["("] = "9",
+  [")"] = "0"
+}
+
+for k, v in pairs(sym_map) do
+  map("i", k, v, opts)
+end
+
+for k, v in pairs(num_map) do
+  map("i", k, v, opts)
+end
+
+map({"i", "v", "n", "c"}, "<CapsLock>", "<Esc>", opts)
