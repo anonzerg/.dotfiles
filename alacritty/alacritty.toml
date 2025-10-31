@@ -1,18 +1,18 @@
-import = ["~/.config/alacritty/themes/nvim.toml",]
-
 [env]
 TERM = "xterm-256color"
 
 [font]
-normal = { family = "Cascadia Code", style = "Medium" }
-bold = { family = "Cascadia Code", style = "Medium" }
-italic = { family = "Cascadia Code", style = "Italic" }
-size = 18
+normal = { family = "Adwaita Mono", style = "Regular" }
+bold = { family = "Adwaita Mono", style = "Regular" }
+italic = { family = "Adwaita Mono", style = "Italic" }
+size = 16
 
 [window]
 dimensions = { columns = 80, lines = 24 }
 padding = { x = 8, y = 8 }
 dynamic_padding = true
+decorations = "None"
+startup_mode = "Maximized"
 opacity = 1.0
 
 [cursor]
@@ -23,3 +23,6 @@ blink_timeout = 0
 [colors]
 #transparent_background_colors = true
 draw_bold_text_with_bright_colors = true
+
+[general]
+import = ["~/.dotfiles/alacritty/themes/nvim.toml",]
