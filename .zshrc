@@ -30,3 +30,5 @@ fi
 if [ -e ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
+
+export MANPAGER="nvim +Man!"
