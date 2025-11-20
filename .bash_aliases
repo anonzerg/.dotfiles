@@ -1,4 +1,3 @@
-alias clean="sudo dnf autoremove && sudo dnf clean all"
 alias ..="cd ..;pwd"
 alias rm="rm -iv"
 alias mv="mv -iv"

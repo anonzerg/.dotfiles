@@ -6,7 +6,6 @@ alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
-alias clean="sudo dnf clean all && sudo dnf autoremove"
 alias ..="cd ..;pwd"
 alias rm="rm -iv"
 alias mv="mv -iv"
