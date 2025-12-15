@@ -97,6 +97,10 @@ lspconfig.zls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
 })
+lspconfig.rust_analyzer.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+})
 
 vim.diagnostic.config({
   update_in_insert = true,
