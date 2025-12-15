@@ -2,9 +2,9 @@
 TERM = "xterm-256color"
 
 [font]
-normal = { family = "Cascadia Code", style = "Regular" }
-bold = { family = "Cascadia Code", style = "Regular" }
-italic = { family = "Cascadia Code", style = "Italic" }
+normal = { family = "Input Mono", style = "Medium" }
+bold = { family = "Input Mono", style = "Medium" }
+italic = { family = "Input Mono", style = "Italic" }
 size = 16
 
 [window]
