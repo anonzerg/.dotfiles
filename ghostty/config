@@ -1,0 +1,14 @@
+font-family = Input Mono
+font-style = Medium
+font-style-bold = Medium
+font-size = 16
+font-feature = -calt, -liga, -dlig
+
+theme = Nvim Dark
+background-opacity = 1.0
+
+window-padding-balance = true
+window-height = 24
+window-width = 80
+window-decoration = server
+maximize = 1
