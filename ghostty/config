@@ -12,3 +12,5 @@ window-height = 24
 window-width = 80
 window-decoration = server
 maximize = 1
+
+adjust-cursor-thickness = 4
