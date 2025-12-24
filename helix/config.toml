@@ -1,0 +1,30 @@
+theme = "nvim"
+
+[editor]
+mouse = false
+line-number = "relative"
+gutters = ["diff", "line-numbers", "spacer"]
+true-color = true
+text-width = 80
+insert-final-newline = false
+trim-final-newlines = true
+trim-trailing-whitespace = true
+popup-border = "all"
+indent-heuristic = "tree-sitter"
+
+auto-pairs = false
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.statusline]
+left = ["mode", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["selections", "register", "position", "file-encoding"]
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
