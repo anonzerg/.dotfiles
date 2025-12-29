@@ -7,7 +7,7 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
 alias ..="cd ..;pwd"
-alias rm="rm -iv"
+alias rm="rm -i"
 alias mv="mv -iv"
 alias mkdir="mkdir -v"
 alias rmdir="rmdir -v"

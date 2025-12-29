@@ -1,5 +1,5 @@
 alias ..="cd ..;pwd"
-alias rm="rm -iv"
+alias rm="rm -i"
 alias mv="mv -iv"
 alias mkdir="mkdir -v"
 alias rmdir="rmdir -v"
