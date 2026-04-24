@@ -1,18 +1,19 @@
-alias ls="ls --color=auto"
-alias ll="ls -altrh"
-alias la="ls -A"
-alias l="ls -CF"
-alias grep="grep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias egrep="egrep --color=auto"
+alias ls='ls --color=auto'
+alias ll='ls -altrh'
+alias la='ls -A'
+alias l='ls -CF'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
-alias ..="cd ..;pwd"
-alias rm="rm -i"
-alias mv="mv -iv"
-alias mkdir="mkdir -v"
-alias rmdir="rmdir -v"
-alias cp="cp -rv"
-alias du="du -sh"
-alias tree="tree -C"
-alias vi="nvim"
-
+alias ..='cd ..;pwd'
+alias rm='rm -i'
+alias mv='mv -iv'
+alias mkdir='mkdir -v'
+alias rmdir='rmdir -v'
+alias cp='cp -rv'
+alias du='du -sh'
+alias tree='tree -C'
+alias vi='nvim'
+alias ping='ping -c 4'
+alias ruby='ruby -w'
