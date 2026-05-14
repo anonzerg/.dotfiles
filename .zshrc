@@ -35,8 +35,8 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-if [ -e ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -e /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 _direnv_hook() {
@@ -55,4 +55,4 @@ fi
 
 export MANPAGER='nvim +Man!'
 export EDITOR='nvim'
-export PATH=$PATH:$HOME/.cargo/bin
+source /usr/local/gromacs/bin/GMXRC

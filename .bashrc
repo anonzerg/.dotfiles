@@ -121,12 +121,9 @@ fi
 export EDITOR=nvim
 
 # cofing git prompt.
-source ~/.git-completion.bash
 source ~/.git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_HIDE_IF_PWD_IGNORED=1
 
 # config shell prompt
 export PS1='\[\033[01;94m\]\w\[\033[93m\]$(__git_ps1 " git:(%s)")\[\033[00m\] \$ '
-
-export PATH=$PATH:"$HOME/.cargo/bin"

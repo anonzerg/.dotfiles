@@ -98,20 +98,6 @@ vim.api.nvim_create_autocmd('CursorHold', {
   end,
 })
 
-vim.lsp.config('rust_analyzer', {
-  cmd = { 'rust-analyzer' },
-  filetypes = { 'rust' },
-  root_markers = { 'Cargo.toml', 'rust-project.json', '.git' },
-  settings = {
-    ['rust-analyzer'] = {
-      checkOnSave = true,
-      check = { command = 'clippy' },
-      procMacro = { enable = true },
-      cargo = { allFeatures = true },
-    }
-  }
-})
-
 vim.lsp.config('gopls', {
   cmd = { 'gopls' },
   filetypes = { 'go' },
@@ -176,7 +162,7 @@ vim.pack.add({
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main' },
   { src = 'https://github.com/neovim/nvim-lspconfig' },
 })
-require('nvim-treesitter').install({ 'c', 'go', 'zig', 'ruby', 'rust', 'python' })
+require('nvim-treesitter').install({ 'c', 'go', 'zig', 'ruby', 'python' })
 vim.api.nvim_create_autocmd('FileType', {
   callback = function(args)
     local lang = vim.treesitter.language.get_lang(args.match)
