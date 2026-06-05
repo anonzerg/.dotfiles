@@ -162,7 +162,7 @@ vim.pack.add({
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main' },
   { src = 'https://github.com/neovim/nvim-lspconfig' },
 })
-require('nvim-treesitter').install({ 'c', 'go', 'zig', 'ruby', 'python' })
+require('nvim-treesitter').install({ 'c', 'go', 'zig', 'rust', 'ruby', 'python', 'julia' })
 vim.api.nvim_create_autocmd('FileType', {
   callback = function(args)
     local lang = vim.treesitter.language.get_lang(args.match)
