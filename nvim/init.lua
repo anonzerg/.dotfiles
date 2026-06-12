@@ -125,7 +125,7 @@ vim.lsp.config('zls', {
   root_markers = { 'build.zig', 'zls.json', '.git' },
 })
 
-vim.lsp.enable({ 'rust_analyzer', 'gopls', 'clangd', 'zls' })
+vim.lsp.enable({ 'gopls', 'clangd', 'zls' })
 
 -- highlights selected text on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
