@@ -1,0 +1,34 @@
+theme = "nvim"
+
+[editor]
+line-number = "relative"
+mouse = false
+auto-format = true
+cursor-shape = {insert = "bar"}
+gutters = ["spacer", "line-numbers", "spacer", "diff"]
+rulers = [80]
+color-modes = true
+popup-border = "all"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 1
+
+[editor.statusline]
+left = [
+  "spacer", "mode", "file-name", "read-only-indicator", "file-modification-indicator"
+]
+right = [
+  "position", "total-line-numbers", "file-type", "version-control", "spacer"
+]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+prefix-len = 4

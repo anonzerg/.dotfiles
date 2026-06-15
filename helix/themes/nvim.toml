@@ -1,0 +1,175 @@
+# Neovim default colorscheme for Helix
+# Ported from Neovim 0.10+ built-in default (highlight_group.c)
+# Dark background variant
+
+"ui.background" = { bg = "#14161B" }
+"ui.cursor" = { modifiers = ["reversed"] }
+"ui.cursor.normal" = { modifiers = ["reversed"] }
+"ui.cursor.insert" = { fg = "#14161B", bg = "#E0E2EA" }
+"ui.cursor.select" = { modifiers = ["reversed"] }
+"ui.cursor.primary" = { modifiers = ["reversed"] }
+"ui.cursor.primary.normal" = { modifiers = ["reversed"] }
+"ui.cursor.primary.insert" = { fg = "#14161B", bg = "#E0E2EA" }
+"ui.cursor.primary.select" = { modifiers = ["reversed"] }
+"ui.cursor.match" = { bg = "#4f5258", modifiers = ["bold"] }
+"ui.cursorline.primary" = { bg = "#2c2e33" }
+"ui.cursorline.secondary" = { bg = "#2c2e33" }
+"ui.cursorcolumn.primary" = { bg = "#2c2e33" }
+"ui.cursorcolumn.secondary" = { bg = "#2c2e33" }
+"ui.linenr" = { fg = "#4f5258" }
+"ui.linenr.selected" = { fg = "#E0E2EA", modifiers = ["bold"] }
+"ui.statusline" = { fg = "#2c2e33", bg = "#C4C6CD" }
+"ui.statusline.inactive" = { fg = "#C4C6CD", bg = "#2c2e33" }
+"ui.statusline.normal" = { fg = "#14161B", bg = "#C4C6CD", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "#14161B", bg = "#b4f6c0", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "#14161B", bg = "#8cf8f7", modifiers = ["bold"] }
+"ui.statusline.separator" = { fg = "#C4C6CD" }
+"ui.bufferline" = { fg = "#C4C6CD", bg = "#2c2e33" }
+"ui.bufferline.active" = { fg = "#E0E2EA", bg = "#2c2e33", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "#14161B" }
+"ui.popup" = { bg = "#07080D" }
+"ui.popup.info" = { fg = "#E0E2EA", bg = "#2c2e33" }
+"ui.window" = { fg = "#4f5258" }
+"ui.help" = { bg = "#2c2e33", fg = "#E0E2EA" }
+"ui.text" = { fg = "#E0E2EA" }
+"ui.text.focus" = { fg = "#EEF1F8" }
+"ui.text.inactive" = { fg = "#9b9ea4" }
+"ui.text.info" = { fg = "#E0E2EA", bg = "#2c2e33" }
+"ui.text.directory" = { fg = "#8cf8f7" }
+"ui.virtual.ruler" = { fg = "#4f5258" }
+"ui.virtual.whitespace" = { fg = "#4f5258" }
+"ui.virtual.indent-guide" = { fg = "#4f5258" }
+"ui.virtual.inlay-hint" = { fg = "#4f5258" }
+"ui.virtual.wrap" = { fg = "#4f5258" }
+"ui.virtual.jump-label" = { fg = "#8cf8f7", modifiers = ["bold"] }
+"ui.selection" = { bg = "#4f5258" }
+"ui.selection.primary" = { bg = "#4f5258" }
+"ui.highlight" = { bg = "#2c2e33" }
+"ui.highlight.frameline" = { bg = "#2c2e33" }
+"ui.debug.breakpoint" = { fg = "#FFC0B9" }
+"ui.debug.active" = { fg = "#FFC0B9" }
+"ui.gutter" = { fg = "#4f5258" }
+"ui.gutter.selected" = { fg = "#4f5258" }
+"ui.menu" = { fg = "#E0E2EA", bg = "#2c2e33" }
+"ui.menu.selected" = { fg = "#2c2e33", bg = "#E0E2EA" }
+"ui.menu.scroll" = { fg = "#C4C6CD", bg = "#4f5258" }
+"ui.picker.header" = { fg = "#07080D", bg = "#8cf8f7" }
+"ui.picker.header.column" = { fg = "#07080D", bg = "#8cf8f7" }
+"ui.picker.header.column.active" = { fg = "#07080D", bg = "#8cf8f7", modifiers = ["bold"] }
+
+# Diagnostic gutter signs
+warning = "#FCE094"
+error = "#FFC0B9"
+info = "#8cf8f7"
+hint = "#A6DBFF"
+
+# Diagnostic underlines
+"diagnostic.warning" = { underline = { color = "#FCE094", style = "line" } }
+"diagnostic.error" = { underline = { color = "#FFC0B9", style = "line" } }
+"diagnostic.info" = { underline = { color = "#8cf8f7", style = "line" } }
+"diagnostic.hint" = { underline = { color = "#A6DBFF", style = "line" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# Syntax highlighting
+comment = "#9b9ea4"
+"comment.line" = "#9b9ea4"
+"comment.block" = "#9b9ea4"
+"comment.documentation" = "#9b9ea4"
+"comment.unused" = "#9b9ea4"
+
+constant = "#E0E2EA"
+"constant.builtin" = "#8cf8f7"
+"constant.builtin.boolean" = "#E0E2EA"
+"constant.character" = "#E0E2EA"
+"constant.character.escape" = "#8cf8f7"
+"constant.numeric" = "#E0E2EA"
+"constant.numeric.float" = "#E0E2EA"
+"constant.numeric.integer" = "#E0E2EA"
+
+string = "#b4f6c0"
+"string.regexp" = "#8cf8f7"
+"string.special" = "#8cf8f7"
+"string.special.path" = "#8cf8f7"
+"string.special.symbol" = "#8cf8f7"
+"string.special.url" = { fg = "#A6DBFF", modifiers = ["underlined"] }
+
+variable = "#E0E2EA"
+"variable.builtin" = "#8cf8f7"
+"variable.parameter" = "#E0E2EA"
+"variable.other.member" = "#A6DBFF"
+
+label = "#E0E2EA"
+
+punctuation = "#E0E2EA"
+"punctuation.delimiter" = "#E0E2EA"
+"punctuation.bracket" = "#E0E2EA"
+"punctuation.special" = "#8cf8f7"
+
+keyword = "#E0E2EA"
+"keyword.control" = "#E0E2EA"
+"keyword.control.conditional" = "#E0E2EA"
+"keyword.control.repeat" = "#E0E2EA"
+"keyword.control.import" = "#E0E2EA"
+"keyword.control.return" = "#E0E2EA"
+"keyword.control.exception" = "#E0E2EA"
+"keyword.operator" = "#E0E2EA"
+"keyword.directive" = "#E0E2EA"
+"keyword.function" = "#E0E2EA"
+"keyword.storage" = "#E0E2EA"
+"keyword.storage.type" = "#E0E2EA"
+"keyword.storage.modifier" = "#E0E2EA"
+
+operator = "#E0E2EA"
+
+function = "#8cf8f7"
+"function.builtin" = "#8cf8f7"
+"function.method" = "#8cf8f7"
+"function.macro" = "#E0E2EA"
+"function.special" = "#E0E2EA"
+
+tag = "#8cf8f7"
+"tag.builtin" = "#8cf8f7"
+
+type = "#E0E2EA"
+"type.builtin" = "#8cf8f7"
+"type.enum" = "#E0E2EA"
+"type.variant" = "#E0E2EA"
+"type.parameter" = "#E0E2EA"
+
+namespace = "#E0E2EA"
+
+attribute = "#E0E2EA"
+
+constructor = "#8cf8f7"
+
+special = "#8cf8f7"
+
+"markup.heading" = { fg = "#E0E2EA", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "#E0E2EA", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "#E0E2EA", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "#E0E2EA", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "#E0E2EA", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "#E0E2EA" }
+"markup.heading.6" = { fg = "#E0E2EA" }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.underline" = { modifiers = ["underlined"] }
+"markup.link.url" = { modifiers = ["underlined"] }
+"markup.link.text" = "#A6DBFF"
+"markup.raw" = "#9b9ea4"
+"markup.raw.inline" = "#9b9ea4"
+"markup.raw.block" = "#9b9ea4"
+"markup.quote" = "#9b9ea4"
+"markup.list" = "#E0E2EA"
+"markup.list.unnumbered" = "#E0E2EA"
+"markup.list.numbered" = "#E0E2EA"
+"markup.list.checked" = "#E0E2EA"
+"markup.list.unchecked" = "#E0E2EA"
+
+"diff.plus" = "#b4f6c0"
+"diff.minus" = "#FFC0B9"
+"diff.delta" = "#8cf8f7"
+
+tabstop = { bg = "#4f5258" }
