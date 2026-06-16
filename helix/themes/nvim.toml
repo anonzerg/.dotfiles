@@ -3,236 +3,252 @@
 # Dark background variant
 
 # Comment scopes
-"comment" = { fg = "light_grey4", modifiers = ["italic"] }
-"comment.line" = "light_grey4"
-"comment.block" = "light_grey4"
-"comment.documentation" = "light_grey4"
-"comment.unused" = "light_grey4"
+"comment" = { fg = "NvimLightGrey4", modifiers = ["italic"] }
+"comment.line" = "NvimLightGrey4"
+"comment.block" = "NvimLightGrey4"
+"comment.documentation" = "NvimLightGrey4"
+"comment.unused" = "NvimLightGrey4"
 
 # Constants (immutable values, booleans, numbers, chars)
-"constant" = "light_grey2"
-"constant.builtin" = "light_cyan"
-"constant.builtin.boolean" = "light_grey2"
-"constant.character" = "light_grey2"
-"constant.character.escape" = "light_cyan"
-"constant.numeric" = "light_grey2"
-"constant.numeric.float" = "light_grey2"
-"constant.numeric.integer" = "light_grey2"
+"constant" = "NvimLightGrey2"
+"constant.builtin" = "NvimLightCyan"
+"constant.builtin.boolean" = "NvimLightGrey2"
+"constant.character" = "NvimLightGrey2"
+"constant.character.escape" = "NvimLightCyan"
+"constant.numeric" = "NvimLightGrey2"
+"constant.numeric.float" = "NvimLightGrey2"
+"constant.numeric.integer" = "NvimLightGrey2"
 
 # Strings (literals, regex, paths, URLs, symbols)
-"string" = "light_green"
-"string.regexp" = "light_cyan"
-"string.special" = "light_cyan"
-"string.special.path" = "light_cyan"
-"string.special.symbol" = "light_cyan"
-"string.special.url" = { fg = "light_blue", modifiers = ["underlined"] }
+"string" = "NvimLightGreen"
+"string.regexp" = "NvimLightCyan"
+"string.special" = "NvimLightCyan"
+"string.special.path" = "NvimLightCyan"
+"string.special.symbol" = "NvimLightCyan"
+"string.special.url" = { fg = "NvimLightBlue", modifiers = ["underlined"] }
 
 # Variables (identifiers, builtins, parameters, struct fields)
-"variable" = "light_grey2"
-"variable.builtin" = "light_cyan"
-"variable.parameter" = "light_grey2"
-"variable.other.member" = "light_blue"
+"variable" = "NvimLightGrey2"
+"variable.builtin" = "NvimLightCyan"
+"variable.parameter" = "NvimLightGrey2"
+"variable.other.member" = "NvimLightBlue"
 
 # Labels (loop labels, etc.)
-"label" = "light_grey2"
+"label" = "NvimLightGrey2"
 
 # Punctuation (delimiters, brackets, special symbols)
-"punctuation" = "light_grey2"
-"punctuation.delimiter" = "light_grey2"
-"punctuation.bracket" = "light_grey2"
-"punctuation.special" = "light_cyan"
+"punctuation" = "NvimLightGrey2"
+"punctuation.delimiter" = "NvimLightGrey2"
+"punctuation.bracket" = "NvimLightGrey2"
+"punctuation.special" = "NvimLightCyan"
 
 # Keywords (control flow, imports, operators, directives)
-"keyword" = "light_grey2"
-"keyword.control" = "light_grey2"
-"keyword.control.conditional" = "light_grey2"
-"keyword.control.repeat" = "light_grey2"
-"keyword.control.import" = "light_grey2"
-"keyword.control.return" = "light_grey2"
-"keyword.control.exception" = "light_grey2"
-"keyword.operator" = "light_grey2"
-"keyword.directive" = "light_grey2"
-"keyword.function" = "light_grey2"
-"keyword.storage" = "light_grey2"
-"keyword.storage.type" = "light_grey2"
-"keyword.storage.modifier" = "light_grey2"
+"keyword" = "NvimLightGrey2"
+"keyword.control" = "NvimLightGrey2"
+"keyword.control.conditional" = "NvimLightGrey2"
+"keyword.control.repeat" = "NvimLightGrey2"
+"keyword.control.import" = "NvimLightGrey2"
+"keyword.control.return" = "NvimLightGrey2"
+"keyword.control.exception" = "NvimLightGrey2"
+"keyword.operator" = "NvimLightGrey2"
+"keyword.directive" = "NvimLightGrey2"
+"keyword.function" = "NvimLightGrey2"
+"keyword.storage" = "NvimLightGrey2"
+"keyword.storage.type" = "NvimLightGrey2"
+"keyword.storage.modifier" = "NvimLightGrey2"
 
 # Operators (logical, mathematical)
-"operator" = "light_grey2"
+"operator" = "NvimLightGrey2"
 
 # Functions (calls, methods, macros, builtins)
-"function" = "light_cyan"
-"function.builtin" = "light_cyan"
-"function.method" = "light_cyan"
-"function.macro" = "light_grey2"
-"function.special" = "light_grey2"
+"function" = "NvimLightCyan"
+"function.builtin" = "NvimLightCyan"
+"function.method" = "NvimLightCyan"
+"function.macro" = "NvimLightGrey2"
+"function.special" = "NvimLightGrey2"
 
 # Tags (HTML/XML elements)
-"tag" = "light_cyan"
-"tag.builtin" = "light_cyan"
+"tag" = "NvimLightCyan"
+"tag.builtin" = "NvimLightCyan"
 
 # Types (classes, structs, enums, primitives)
-"type" = "light_grey2"
-"type.builtin" = "light_cyan"
-"type.enum" = "light_grey2"
-"type.variant" = "light_grey2"
-"type.parameter" = "light_grey2"
+"type" = "NvimLightGrey2"
+"type.builtin" = "NvimLightCyan"
+"type.enum" = "NvimLightGrey2"
+"type.variant" = "NvimLightGrey2"
+"type.parameter" = "NvimLightGrey2"
 
 # Namespaces / modules
-"namespace" = "light_grey2"
+"namespace" = "NvimLightGrey2"
 
 # Attributes (class/struct fields, HTML tag attributes)
-"attribute" = "light_grey2"
+"attribute" = "NvimLightGrey2"
 
 # Constructors
-"constructor" = "light_cyan"
+"constructor" = "NvimLightCyan"
 
 # Special symbols (e.g. `?` in Rust, `...` in Hare)
-"special" = "light_cyan"
+"special" = "NvimLightCyan"
 
 # Markup (Markdown, heading levels, bold, italic, links, lists, code blocks)
-"markup.heading" = { fg = "light_grey2", modifiers = ["bold"] }
-"markup.heading.1" = { fg = "light_grey2", modifiers = ["bold"] }
-"markup.heading.2" = { fg = "light_grey2", modifiers = ["bold"] }
-"markup.heading.3" = { fg = "light_grey2", modifiers = ["bold"] }
-"markup.heading.4" = { fg = "light_grey2", modifiers = ["bold"] }
-"markup.heading.5" = { fg = "light_grey2" }
-"markup.heading.6" = { fg = "light_grey2" }
+"markup.heading" = { fg = "NvimLightGrey2", modifiers = ["bold"] }
+"markup.heading.1" = { fg = "NvimLightGrey2", modifiers = ["bold"] }
+"markup.heading.2" = { fg = "NvimLightGrey2", modifiers = ["bold"] }
+"markup.heading.3" = { fg = "NvimLightGrey2", modifiers = ["bold"] }
+"markup.heading.4" = { fg = "NvimLightGrey2", modifiers = ["bold"] }
+"markup.heading.5" = { fg = "NvimLightGrey2" }
+"markup.heading.6" = { fg = "NvimLightGrey2" }
 "markup.bold" = { modifiers = ["bold"] }
 "markup.italic" = { modifiers = ["italic"] }
 "markup.strikethrough" = { modifiers = ["crossed_out"] }
 "markup.underline" = { modifiers = ["underlined"] }
 "markup.link.url" = { modifiers = ["underlined"] }
-"markup.link.text" = "light_blue"
-"markup.raw" = "light_grey4"
-"markup.raw.inline" = "light_grey4"
-"markup.raw.block" = "light_grey4"
-"markup.quote" = "light_grey4"
-"markup.list" = "light_grey2"
-"markup.list.unnumbered" = "light_grey2"
-"markup.list.numbered" = "light_grey2"
-"markup.list.checked" = "light_grey2"
-"markup.list.unchecked" = "light_grey2"
+"markup.link.text" = "NvimLightBlue"
+"markup.raw" = "NvimLightGrey4"
+"markup.raw.inline" = "NvimLightGrey4"
+"markup.raw.block" = "NvimLightGrey4"
+"markup.quote" = "NvimLightGrey4"
+"markup.list" = "NvimLightGrey2"
+"markup.list.unnumbered" = "NvimLightGrey2"
+"markup.list.numbered" = "NvimLightGrey2"
+"markup.list.checked" = "NvimLightGrey2"
+"markup.list.unchecked" = "NvimLightGrey2"
 
 # Diff (version control changes)
-"diff.plus" = "light_green"
-"diff.minus" = "light_red"
-"diff.delta" = "light_cyan"
+"diff.plus" = "NvimLightGreen"
+"diff.minus" = "NvimLightRed"
+"diff.delta" = "NvimLightCyan"
 
 # Diagnostic gutter signs (LSP gutter indicators)
-warning = "light_yellow"
-error = "light_red"
-info = "light_cyan"
-hint = "light_blue"
+warning = "NvimLightYellow"
+error = "NvimLightRed"
+info = "NvimLightCyan"
+hint = "NvimLightBlue"
 
 # Diagnostic underlines (LSP inline diagnostics)
-"diagnostic.warning" = { underline = { color = "light_yellow", style = "line" } }
-"diagnostic.error" = { underline = { color = "light_red", style = "line" } }
-"diagnostic.info" = { underline = { color = "light_cyan", style = "line" } }
-"diagnostic.hint" = { underline = { color = "light_blue", style = "line" } }
+"diagnostic.warning" = { underline = { color = "NvimLightYellow", style = "line" } }
+"diagnostic.error" = { underline = { color = "NvimLightRed", style = "line" } }
+"diagnostic.info" = { underline = { color = "NvimLightCyan", style = "line" } }
+"diagnostic.hint" = { underline = { color = "NvimLightBlue", style = "line" } }
 "diagnostic.unnecessary" = { modifiers = ["dim"] }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 
 # Tabstop (visible tab characters)
-"tabstop" = { bg = "dark_grey4" }
+"tabstop" = { bg = "NvimDarkGrey4" }
 
 # UI - Background and buffers
-"ui.background" = { bg = "dark_grey2" }
-"ui.bufferline" = { fg = "light_grey3", bg = "dark_grey3" }
-"ui.bufferline.active" = { fg = "light_grey2", bg = "dark_grey3", modifiers = ["bold"] }
-"ui.bufferline.background" = { bg = "dark_grey2" }
+"ui.background" = { bg = "NvimDarkGrey2" }
+"ui.bufferline" = { fg = "NvimLightGrey3", bg = "NvimDarkGrey3" }
+"ui.bufferline.active" = { fg = "NvimLightGrey2", bg = "NvimDarkGrey3", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "NvimDarkGrey2" }
 
 # UI - Cursors
 "ui.cursor" = { modifiers = ["reversed"] }
 "ui.cursor.normal" = { modifiers = ["reversed"] }
-"ui.cursor.insert" = { fg = "dark_grey2", bg = "light_grey2" }
+"ui.cursor.insert" = { fg = "NvimDarkGrey2", bg = "NvimLightGrey2" }
 "ui.cursor.select" = { modifiers = ["reversed"] }
 "ui.cursor.primary" = { modifiers = ["reversed"] }
 "ui.cursor.primary.normal" = { modifiers = ["reversed"] }
-"ui.cursor.primary.insert" = { fg = "dark_grey2", bg = "light_grey2" }
+"ui.cursor.primary.insert" = { fg = "NvimDarkGrey2", bg = "NvimLightGrey2" }
 "ui.cursor.primary.select" = { modifiers = ["reversed"] }
-"ui.cursor.match" = { bg = "dark_grey4", modifiers = ["bold"] }
+"ui.cursor.match" = { bg = "NvimDarkGrey4", modifiers = ["bold"] }
 
 # UI - Cursor lines and columns
-"ui.cursorcolumn.primary" = { bg = "dark_grey3" }
-"ui.cursorcolumn.secondary" = { bg = "dark_grey3" }
-"ui.cursorline.primary" = { bg = "dark_grey3" }
-"ui.cursorline.secondary" = { bg = "dark_grey3" }
+"ui.cursorcolumn.primary" = { bg = "NvimDarkGrey3" }
+"ui.cursorcolumn.secondary" = { bg = "NvimDarkGrey3" }
+"ui.cursorline.primary" = { bg = "NvimDarkGrey3" }
+"ui.cursorline.secondary" = { bg = "NvimDarkGrey3" }
 
 # UI - Debug
-"ui.debug.breakpoint" = { fg = "light_red" }
-"ui.debug.active" = { fg = "light_red" }
+"ui.debug.breakpoint" = { fg = "NvimLightRed" }
+"ui.debug.active" = { fg = "NvimLightRed" }
 
 # UI - Gutter (left margin for diagnostics and breakpoints)
-"ui.gutter" = { fg = "dark_grey4" }
-"ui.gutter.selected" = { fg = "dark_grey4" }
+"ui.gutter" = { fg = "NvimDarkGrey4" }
+"ui.gutter.selected" = { fg = "NvimDarkGrey4" }
 
 # UI - Help popup
-"ui.help" = { bg = "dark_grey3", fg = "light_grey2" }
+"ui.help" = { bg = "NvimDarkGrey3", fg = "NvimLightGrey2" }
 
 # UI - Highlight (buffer picker selection, symbol picker)
-"ui.highlight" = { bg = "dark_grey3" }
-"ui.highlight.frameline" = { bg = "dark_grey3" }
+"ui.highlight" = { bg = "NvimDarkGrey3" }
+"ui.highlight.frameline" = { bg = "NvimDarkGrey3" }
 
 # UI - Line numbers
-"ui.linenr" = { fg = "dark_grey4" }
-"ui.linenr.selected" = { fg = "light_grey2", modifiers = ["bold"] }
+"ui.linenr" = { fg = "NvimDarkGrey4" }
+"ui.linenr.selected" = { fg = "NvimLightGrey2", modifiers = ["bold"] }
 
 # UI - Autocomplete menu
-"ui.menu" = { fg = "light_grey2", bg = "dark_grey3" }
-"ui.menu.selected" = { fg = "dark_grey3", bg = "light_grey2" }
-"ui.menu.scroll" = { fg = "light_grey3", bg = "dark_grey4" }
+"ui.menu" = { fg = "NvimLightGrey2", bg = "NvimDarkGrey3" }
+"ui.menu.selected" = { fg = "NvimDarkGrey3", bg = "NvimLightGrey2" }
+"ui.menu.scroll" = { fg = "NvimLightGrey3", bg = "NvimDarkGrey4" }
 
 # UI - Picker headers
-"ui.picker.header" = { fg = "dark_grey1", bg = "light_cyan" }
-"ui.picker.header.column" = { fg = "dark_grey1", bg = "light_cyan" }
-"ui.picker.header.column.active" = { fg = "dark_grey1", bg = "light_cyan", modifiers = ["bold"] }
+"ui.picker.header" = { fg = "NvimDarkGrey1", bg = "NvimLightCyan" }
+"ui.picker.header.column" = { fg = "NvimDarkGrey1", bg = "NvimLightCyan" }
+"ui.picker.header.column.active" = { fg = "NvimDarkGrey1", bg = "NvimLightCyan", modifiers = ["bold"] }
 
 # UI - Popups (documentation and info boxes)
-"ui.popup" = { bg = "dark_grey3" }
-"ui.popup.info" = { fg = "light_grey2", bg = "dark_grey3" }
+"ui.popup" = { bg = "NvimDarkGrey3" }
+"ui.popup.info" = { fg = "NvimLightGrey2", bg = "NvimDarkGrey3" }
 
 # UI - Selections
-"ui.selection" = { bg = "dark_grey4" }
-"ui.selection.primary" = { bg = "dark_grey4" }
+"ui.selection" = { bg = "NvimDarkGrey4" }
+"ui.selection.primary" = { bg = "NvimDarkGrey4" }
 
 # UI - Status line
-"ui.statusline" = { fg = "dark_grey3", bg = "light_grey3" }
-"ui.statusline.inactive" = { fg = "light_grey3", bg = "dark_grey3" }
-"ui.statusline.normal" = { fg = "dark_grey2", bg = "light_grey3", modifiers = ["bold"] }
-"ui.statusline.insert" = { fg = "dark_grey2", bg = "light_cyan", modifiers = ["bold"] }
-"ui.statusline.select" = { fg = "dark_grey2", bg = "light_yellow", modifiers = ["bold"] }
-"ui.statusline.separator" = { fg = "light_grey3" }
+"ui.statusline" = { fg = "NvimDarkGrey3", bg = "NvimLightGrey3" }
+"ui.statusline.inactive" = { fg = "NvimLightGrey3", bg = "NvimDarkGrey3" }
+"ui.statusline.normal" = { fg = "NvimDarkGrey2", bg = "NvimLightGrey3", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "NvimDarkGrey2", bg = "NvimLightCyan", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "NvimDarkGrey2", bg = "NvimLightYellow", modifiers = ["bold"] }
+"ui.statusline.separator" = { fg = "NvimLightGrey3" }
 
 # UI - Text (general editor text)
-"ui.text" = { fg = "light_grey2" }
-"ui.text.focus" = { fg = "light_grey1" }
-"ui.text.inactive" = { fg = "light_grey4" }
-"ui.text.info" = { fg = "light_grey2", bg = "dark_grey3" }
-"ui.text.directory" = { fg = "light_cyan" }
+"ui.text" = { fg = "NvimLightGrey2" }
+"ui.text.focus" = { fg = "NvimLightGrey1" }
+"ui.text.inactive" = { fg = "NvimLightGrey4" }
+"ui.text.info" = { fg = "NvimLightGrey2", bg = "NvimDarkGrey3" }
+"ui.text.directory" = { fg = "NvimLightCyan" }
 
 # UI - Virtual text (rulers, whitespace, indent guides, inlay hints, wraps)
-"ui.virtual.indent-guide" = { fg = "dark_grey4" }
-"ui.virtual.inlay-hint" = { fg = "dark_grey4" }
-"ui.virtual.jump-label" = { fg = "light_cyan", modifiers = ["bold"] }
-"ui.virtual.ruler" = { fg = "dark_grey4" }
-"ui.virtual.whitespace" = { fg = "dark_grey4" }
-"ui.virtual.wrap" = { fg = "dark_grey4" }
+"ui.virtual.indent-guide" = { fg = "NvimDarkGrey4" }
+"ui.virtual.inlay-hint" = { fg = "NvimDarkGrey4" }
+"ui.virtual.jump-label" = { fg = "NvimLightCyan", modifiers = ["bold"] }
+"ui.virtual.ruler" = { fg = "NvimDarkGrey4" }
+"ui.virtual.whitespace" = { fg = "NvimDarkGrey4" }
+"ui.virtual.wrap" = { fg = "NvimDarkGrey4" }
 
 # UI - Window split border
-"ui.window" = { fg = "dark_grey4" }
+"ui.window" = { fg = "NvimDarkGrey4" }
 
+# novim default color pallete
 [palette]
-dark_grey1 = "#07080d"
-dark_grey2 = "#14161b"
-dark_grey3 = "#2c2e33"
-dark_grey4 = "#4f5258"
-light_grey1 = "#eef1f8"
-light_grey2 = "#e0e2ea"
-light_grey3 = "#c4c6cd"
-light_grey4 = "#9b9ea4"
-light_cyan = "#8cf8f7"
-light_blue = "#a6dbff"
-light_green = "#b4f6c0"
-light_red = "#ffc0b9"
-light_yellow = "#fce094"
+NvimDarkBlue = "#004c73"
+NvimDarkCyan = "#007373"
+NvimDarkGray1 = "#07080d"
+NvimDarkGray2 = "#14161b"
+NvimDarkGray3 = "#2c2e33"
+NvimDarkGray4 = "#4f5258"
+NvimDarkGreen = "#005523"
+NvimDarkGrey1 = "#07080d"
+NvimDarkGrey2 = "#14161b"
+NvimDarkGrey3 = "#2c2e33"
+NvimDarkGrey4 = "#4f5258"
+NvimDarkMagenta = "#470045"
+NvimDarkRed = "#590008"
+NvimDarkYellow = "#6b5300"
+NvimLightBlue = "#a6dbff"
+NvimLightCyan = "#8cf8f7"
+NvimLightGray1 = "#eef1f8"
+NvimLightGray2 = "#e0e2ea"
+NvimLightGray3 = "#c4c6cd"
+NvimLightGray4 = "#9b9ea4"
+NvimLightGreen = "#b3f6c0"
+NvimLightGrey1 = "#eef1f8"
+NvimLightGrey2 = "#e0e2ea"
+NvimLightGrey3 = "#c4c6cd"
+NvimLightGrey4 = "#9b9ea4"
+NvimLightMagenta = "#ffcaff"
+NvimLightRed = "#ffc0b9"
+NvimLightYellow = "#fce094"
