@@ -1,131 +1,6 @@
--- basic options
--- vim.g.mapleader = ' '
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.wildignorecase = true
-vim.o.ignorecase = true
-vim.o.smartcase = true
-vim.o.showmatch = true
-vim.o.wrap = false
-vim.o.wrapscan = false
-vim.o.tabstop = 2
-vim.o.softtabstop = 2
-vim.o.shiftwidth = 2
-vim.o.expandtab = true
-vim.o.autoindent = true
-vim.o.splitbelow = true
-vim.o.splitright = true
-vim.o.title = true
-vim.cmd('syntax on')
-vim.cmd.filetype('plugin indent on')
-vim.o.confirm = true
-vim.o.colorcolumn = '80'
-vim.o.swapfile = false
-vim.o.backup = false
-vim.o.mouse = 'nv'
-vim.o.signcolumn = 'yes'
-vim.o.completeopt = 'menu,menuone,noselect'
-vim.o.termguicolors = true
-vim.o.winborder = 'rounded'
-vim.o.scrolloff = 8
-vim.o.autocomplete = true
-vim.o.updatetime = 300
-
--- language server settings
-vim.lsp.config('*', {
-  capabilities = vim.lsp.protocol.make_client_capabilities()
-})
-vim.api.nvim_create_autocmd('LspAttach', {
-  group = vim.api.nvim_create_augroup('languageServer', { clear = true }),
-  callback = function(args)
-    local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
-    local opts = { buffer = args.buf, noremap = true, silent = true }
-
-    if client:supports_method('textDocument/definition') then
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-    end
-    if client:supports_method('textDocument/signatureHelp') then
-      vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help, opts)
-    end
-    if client:supports_method('textDocument/completion') then
-      vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
-    end
-    if not client:supports_method('textDocument/willSaveWaitUntil')
-      and client:supports_method('textDocument/formatting') then
-    vim.api.nvim_create_autocmd('BufWritePre', {
-      group = vim.api.nvim_create_augroup('languageServer.lsp.format.' .. args.buf, {
-        clear = true
-      }),
-      buffer = args.buf,
-      callback = function()
-        vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
-      end,
-    })
-    end
-  end,
-})
-
-vim.diagnostic.config({
-  update_in_insert = true,
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = 'E',
-      [vim.diagnostic.severity.WARN] = 'W',
-      [vim.diagnostic.severity.HINT] = 'H',
-      [vim.diagnostic.severity.INFO] = 'I',
-    },
-  },
-  underline = true,
-  severity_sort = true,
-  float = {
-    format = function(diagnostic)
-      if diagnostic.source then
-        return string.format('%s: %s', diagnostic.source, diagnostic.message)
-      end
-    return diagnostic.message
-    end,
-  },
-})
-
-vim.api.nvim_create_autocmd('CursorHold', {
-  callback = function()
-    vim.diagnostic.open_float(nil, {
-      focusable = false,
-      max_width = vim.o.columns,
-      wrap = true,
-      severity_sort = true,
-    })
-  end,
-})
-
-vim.lsp.config('gopls', {
-  cmd = { 'gopls' },
-  filetypes = { 'go' },
-  root_markers = { 'go.mod', '.git' },
-  settings = {
-    gopls = { 
-      analyses = { unusedparams = true, nilness = true, shadow = true },
-      gofumpt = true,
-      staticcheck = true,
-      usePlaceholders = true,
-      completeUnimported = true,
-    },
-  },
-})
-
-vim.lsp.config('clangd', {
-  cmd = { 'clangd' },
-  filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda', 'proto' },
-  root_markers = { '.clangd', '.clang-format', 'compile_commands.json', '.git' },
-})
-
-vim.lsp.config('zls', {
-  cmd = { 'zls' },
-  filetypes = { 'zig' },
-  root_markers = { 'build.zig', 'zls.json', '.git' },
-})
-
-vim.lsp.enable({ 'gopls', 'clangd', 'zls' })
+require("options")
+require("lsp")
+require("keymaps")
 
 -- highlights selected text on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -150,13 +25,6 @@ vim.api.nvim_create_autocmd('BufReadPost', {
   callback = jump_to_last_pos
 })
 
--- status line and current line
-vim.o.cursorline = true
-vim.api.nvim_set_hl(0, 'CursorLine', {fg = 'NONE'})
-vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#fce094'})
-vim.api.nvim_set_hl(0, 'StatusLine', { fg = '#ffffff', bg = '#4f5258', bold = true })
-vim.o.statusline = '%#StatusLine# %F %h%m%r%=%-14.(%l,%c%V%) %y %P '
-
 -- packages
 vim.pack.add({
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'main' },
@@ -170,8 +38,3 @@ vim.api.nvim_create_autocmd('FileType', {
     local ok = pcall(vim.treesitter.start, args.buf, lanf)
   end,
 })
-
--- keymaps
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'go to next diagnostic' })
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'go to previous diagnostic' })
