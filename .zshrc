@@ -42,3 +42,4 @@ fi
 export MANPAGER='nvim +Man!'
 export EDITOR='nvim'
 source /usr/local/gromacs/bin/GMXRC
+cat "$HOME/.dotfiles/cDc"
