@@ -1,6 +1,6 @@
-require("options")
-require("lsp")
-require("keymaps")
+require('options')
+require('lsp')
+require('keymaps')
 
 -- highlights selected text on yank
 vim.api.nvim_create_autocmd('TextYankPost', {
