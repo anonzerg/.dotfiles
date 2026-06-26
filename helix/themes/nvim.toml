@@ -176,7 +176,7 @@ hint = "NvimLightBlue"
 
 # UI - Line numbers
 "ui.linenr" = { fg = "NvimDarkGrey4" }
-"ui.linenr.selected" = { fg = "NvimLightGrey2", modifiers = ["bold"] }
+"ui.linenr.selected" = { fg = "NvimLightYellow", modifiers = ["bold"] }
 
 # UI - Autocomplete menu
 "ui.menu" = { fg = "NvimLightGrey2", bg = "NvimDarkGrey3" }

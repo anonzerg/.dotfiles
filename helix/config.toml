@@ -1,4 +1,4 @@
-theme = "nvim"
+theme = "acme"
 
 [editor]
 line-number = "relative"
@@ -9,6 +9,8 @@ gutters = ["spacer", "line-numbers", "spacer", "diff"]
 rulers = [80]
 color-modes = true
 popup-border = "all"
+indent-heuristic = "tree-sitter"
+true-color = true
 
 [editor.file-picker]
 hidden = false
@@ -25,9 +27,9 @@ left = [
 right = [
   "position", "total-line-numbers", "file-type", "version-control", "spacer"
 ]
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SEL"
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
