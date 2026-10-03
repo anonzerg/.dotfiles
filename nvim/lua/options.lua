@@ -1,5 +1,6 @@
 -- basic options
 -- vim.g.mapleader = ' '
+vim.cmd('colorscheme default')
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.wildignorecase = true
@@ -34,6 +35,6 @@ vim.o.updatetime = 300
 -- status line and current line
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', {fg = 'NONE'})
-vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#fce094'})
-vim.api.nvim_set_hl(0, 'StatusLine', { fg = '#ffffff', bg = '#4f5258', bold = true })
+vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#fce094'}) -- default dark
+-- vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#6b5300'}) -- default light
 vim.o.statusline = '%#StatusLine# %F %h%m%r%=%-14.(%l,%c%V%) %y %P '
