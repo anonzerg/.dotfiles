@@ -1,8 +1,10 @@
-font-family = Cascadia Code
-font-style = Regular
-font-style-bold = Regular
-font-size = 16
-font-feature = -calt, -liga, -dlig
+font-family = Iosevka
+font-style = Medium
+font-style-bold = Medium
+font-size = 18
+
+#font-feature = -calt, +ss03, +ss08, +cv16, +cv30, +cv31 # Fira Code
+font-feature = -calt, cv01 7, VSAB 7, VSAG 2, VSAH 3, VSAI 1, VSAO 3, VSAQ 2, VSAT 1
 
 theme = Nvim Dark
 background-opacity = 1.0
@@ -11,6 +13,6 @@ window-padding-balance = true
 window-height = 24
 window-width = 80
 window-decoration = server
-maximize = 1
+maximize = 0
 
 adjust-cursor-thickness = 4
