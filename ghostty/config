@@ -3,7 +3,6 @@ font-style = Medium
 font-style-bold = Medium
 font-size = 18
 
-#font-feature = -calt, +ss03, +ss08, +cv16, +cv30, +cv31 # Fira Code
 font-feature = -calt, cv01 7, VSAB 7, VSAG 2, VSAH 3, VSAI 1, VSAO 3, VSAQ 2, VSAT 1
 
 theme = Nvim Dark
@@ -15,4 +14,4 @@ window-width = 80
 window-decoration = server
 maximize = 0
 
-adjust-cursor-thickness = 4
+adjust-cursor-thickness = 2
