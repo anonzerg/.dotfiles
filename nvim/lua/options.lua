@@ -35,6 +35,11 @@ vim.o.updatetime = 300
 -- status line and current line
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', {fg = 'NONE'})
-vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#fce094'}) -- default dark
--- vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#6b5300'}) -- default light
+
+if vim.o.background == 'light' then
+  vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#6b5300'}) -- default light
+else
+  vim.api.nvim_set_hl(0, 'CursorLineNr', {fg = '#fce094'}) -- default dark
+end
+
 vim.o.statusline = '%#StatusLine# %F %h%m%r%=%-14.(%l,%c%V%) %y %P '
