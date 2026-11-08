@@ -22,10 +22,18 @@ skip-levels = 1
 
 [editor.statusline]
 left = [
-  "spacer", "mode", "file-name", "read-only-indicator", "file-modification-indicator"
+  "spacer",
+  "mode",
+  "file-name",
+  "read-only-indicator",
+  "file-modification-indicator",
 ]
 right = [
-  "position", "total-line-numbers", "file-type", "version-control", "spacer"
+  "position",
+  "total-line-numbers",
+  "file-type",
+  "version-control",
+  "spacer",
 ]
 mode.normal = "NOR"
 mode.insert = "INS"
