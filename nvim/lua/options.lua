@@ -13,16 +13,12 @@ vim.o.tabstop = 2
 vim.o.softtabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
-vim.o.autoindent = true
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.title = true
-vim.cmd('syntax on')
-vim.cmd.filetype('plugin indent on')
 vim.o.confirm = true
 vim.o.colorcolumn = '80'
 vim.o.swapfile = false
-vim.o.backup = false
 vim.o.mouse = 'nv'
 vim.o.signcolumn = 'yes'
 vim.o.completeopt = 'menu,menuone,noselect'
@@ -30,7 +26,7 @@ vim.o.termguicolors = true
 vim.o.winborder = 'rounded'
 vim.o.scrolloff = 8
 vim.o.autocomplete = true
-vim.o.updatetime = 300
+vim.o.updatetime = 250
 
 -- status line and current line
 vim.o.cursorline = true
